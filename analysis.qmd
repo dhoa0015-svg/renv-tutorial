@@ -14,11 +14,12 @@ print(penguin_counts)
 ```
 
 ```{r}
-#| label: penguin-fig
-#| fig-cap: "Body mass to flipper length"
+#| label: fig-penguin
+#| fig-cap: "Name"
+#| warning: false
 
 ggplot(penguins, aes(y = body_mass_g, x = flipper_length_mm)) + 
     geom_point()
 ```
 
-This is my referencing to this plot @penguin-fig 
+This is my referencing to this plot @fig-penguin
