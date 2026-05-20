@@ -1,2 +1,24 @@
+---
+title: "Untitled"
+format: html
+---
 
 ```{r}
+library(ggplot2)
+library(palmerpenguins)
+library(knitr)
+library(rmarkdown)
+
+penguin_counts <- table(penguins$species, penguins$island)
+print(penguin_counts)
+```
+
+```{r}
+#| label: penguin-fig
+#| fig-cap: "Body mass to flipper length"
+
+ggplot(penguins, aes(y = body_mass_g, x = flipper_length_mm)) + 
+    geom_point()
+```
+
+This is my referencing to this plot @penguin-fig 
